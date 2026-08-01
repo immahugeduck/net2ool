@@ -59,6 +59,7 @@ export function AppShell({ children, userName }: { children: React.ReactNode; us
             {userName && <span className="hidden text-xs text-muted-foreground sm:inline">{userName}</span>}
             <Button
               render={<Link href="/settings" />}
+              nativeButton={false}
               variant="ghost"
               size="icon"
               aria-label="Settings"

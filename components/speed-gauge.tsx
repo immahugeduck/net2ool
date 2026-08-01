@@ -78,7 +78,7 @@ export function SpeedGauge({
     <div className="relative flex flex-col items-center">
       <svg
         viewBox={`0 0 ${size} ${size}`}
-        className="w-full max-w-[260px]"
+        className="h-auto w-full max-h-[38svh] max-w-[260px] sm:max-h-none"
         role="img"
         aria-label={`${PHASE_COPY[phase]}: ${formatMbps(mbps)} megabits per second`}
       >
