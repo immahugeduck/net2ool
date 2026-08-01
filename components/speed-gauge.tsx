@@ -21,9 +21,17 @@ function valueToAngle(mbps: number) {
   return START_ANGLE + fraction * SWEEP
 }
 
+/**
+ * Coordinates are rounded to 3dp before they reach the DOM. Raw IEEE-754 floats
+ * can stringify with different trailing digits during SSR than on the client,
+ * which React reports as a hydration mismatch. Rounding makes the output
+ * deterministic and is far below sub-pixel visibility.
+ */
+const round = (n: number) => Math.round(n * 1000) / 1000
+
 function polar(cx: number, cy: number, r: number, angleDeg: number) {
   const rad = (angleDeg * Math.PI) / 180
-  return { x: cx + r * Math.cos(rad), y: cy + r * Math.sin(rad) }
+  return { x: round(cx + r * Math.cos(rad)), y: round(cy + r * Math.sin(rad)) }
 }
 
 function arcPath(cx: number, cy: number, r: number, fromDeg: number, toDeg: number) {

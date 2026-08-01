@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Signal-wave mark drawn on the standard 108dp adaptive-icon canvas.
+  The inner 72dp is the safe zone; everything here stays well inside it.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Outer arc -->
+    <path
+        android:fillColor="#00E5C0"
+        android:pathData="M54,40.5c9.6,0 18.4,3.7 25,9.7l-5.4,5.9C68,50.9 61.3,48 54,48c-7.3,0 -14,2.9 -19.6,8.1l-5.4,-5.9C35.6,44.2 44.4,40.5 54,40.5z" />
+    <!-- Middle arc -->
+    <path
+        android:fillColor="#00E5C0"
+        android:pathData="M54,55c5.7,0 10.9,2.2 14.8,5.8l-5.5,6C60.8,64.4 57.6,63 54,63c-3.6,0 -6.8,1.4 -9.3,3.8l-5.5,-6C43.1,57.2 48.3,55 54,55z" />
+    <!-- Signal origin dot -->
+    <path
+        android:fillColor="#00E5C0"
+        android:pathData="M54,69.5m-5.5,0a5.5,5.5 0 1,0 11,0a5.5,5.5 0 1,0 -11,0" />
+</vector>
