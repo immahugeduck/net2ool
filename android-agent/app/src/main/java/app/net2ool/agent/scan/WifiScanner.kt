@@ -1,4 +1,4 @@
-package app.netscope.agent.scan
+package app.net2ool.agent.scan
 
 import android.Manifest
 import android.content.BroadcastReceiver
@@ -9,7 +9,7 @@ import android.content.pm.PackageManager
 import android.net.wifi.WifiManager
 import android.os.Build
 import androidx.core.content.ContextCompat
-import app.netscope.agent.data.WifiApDto
+import app.net2ool.agent.data.WifiApDto
 import kotlinx.coroutines.TimeoutCancellationException
 import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlinx.coroutines.withTimeout

@@ -33,7 +33,7 @@ export function AppShell({ children, userName }: { children: React.ReactNode; us
             <span className="flex size-8 items-center justify-center rounded-lg border border-border bg-card">
               <Activity className="size-4 text-primary" aria-hidden="true" />
             </span>
-            <span className="font-mono text-sm font-semibold tracking-tight">NetScope</span>
+            <span className="font-mono text-sm font-semibold tracking-tight">net2ool</span>
           </Link>
 
           <nav aria-label="Primary" className="hidden items-center gap-1 md:flex">

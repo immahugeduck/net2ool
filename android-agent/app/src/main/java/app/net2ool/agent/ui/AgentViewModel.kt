@@ -1,15 +1,15 @@
-package app.netscope.agent.ui
+package app.net2ool.agent.ui
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import app.netscope.agent.data.AgentStore
-import app.netscope.agent.data.ApiResult
-import app.netscope.agent.data.IngestApi
-import app.netscope.agent.scan.BleScanner
-import app.netscope.agent.scan.UsageCollector
-import app.netscope.agent.scan.WifiScanner
-import app.netscope.agent.work.SyncWorker
+import app.net2ool.agent.data.AgentStore
+import app.net2ool.agent.data.ApiResult
+import app.net2ool.agent.data.IngestApi
+import app.net2ool.agent.scan.BleScanner
+import app.net2ool.agent.scan.UsageCollector
+import app.net2ool.agent.scan.WifiScanner
+import app.net2ool.agent.work.SyncWorker
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -76,7 +76,7 @@ class AgentViewModel(app: Application) : AndroidViewModel(app) {
             return
         }
         if (key.isEmpty()) {
-            _state.value = current.copy(error = "Paste the agent key from NetScope settings")
+            _state.value = current.copy(error = "Paste the agent key from net2ool settings")
             return
         }
 
@@ -125,7 +125,7 @@ class AgentViewModel(app: Application) : AndroidViewModel(app) {
     fun unpair() {
         SyncWorker.cancel(getApplication())
         store.clear()
-        _state.value = AgentUiState(message = "Agent unpaired. Revoke the key in NetScope too.")
+        _state.value = AgentUiState(message = "Agent unpaired. Revoke the key in net2ool too.")
         refresh()
     }
 

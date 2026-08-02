@@ -1,4 +1,4 @@
-package app.netscope.agent.data
+package app.net2ool.agent.data
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -9,7 +9,7 @@ import androidx.security.crypto.MasterKey
  * Persists the agent key and server URL.
  *
  * The key is a bearer credential that grants write access to the user's
- * NetScope account, so it is stored in EncryptedSharedPreferences (AES-256-GCM,
+ * net2ool account, so it is stored in EncryptedSharedPreferences (AES-256-GCM,
  * key material held in the hardware-backed keystore) rather than plain prefs.
  */
 class AgentStore(context: Context) {
@@ -21,7 +21,7 @@ class AgentStore(context: Context) {
 
         EncryptedSharedPreferences.create(
             context,
-            "netscope_agent",
+            "net2ool_agent",
             masterKey,
             EncryptedSharedPreferences.PrefKeyEncryptionScheme.AES256_SIV,
             EncryptedSharedPreferences.PrefValueEncryptionScheme.AES256_GCM,

@@ -182,7 +182,7 @@ export function SpeedTestPanel({
           </div>
           <p className="text-xs leading-relaxed text-muted-foreground text-pretty">
             A device routes traffic over one interface at a time, so Wi-Fi and cellular cannot be measured at the same
-            instant. Run one, switch your connection, run the other — NetScope pairs them automatically.
+            instant. Run one, switch your connection, run the other — net2ool pairs them automatically.
           </p>
         </div>
 

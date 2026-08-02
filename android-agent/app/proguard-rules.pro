@@ -3,13 +3,13 @@
 -keepattributes *Annotation*, InnerClasses
 -dontnote kotlinx.serialization.**
 
--keepclassmembers class app.netscope.agent.data.** {
+-keepclassmembers class app.net2ool.agent.data.** {
     *** Companion;
 }
--keepclasseswithmembers class app.netscope.agent.data.** {
+-keepclasseswithmembers class app.net2ool.agent.data.** {
     kotlinx.serialization.KSerializer serializer(...);
 }
--keep,includedescriptorclasses class app.netscope.agent.data.**$$serializer { *; }
+-keep,includedescriptorclasses class app.net2ool.agent.data.**$$serializer { *; }
 
 # OkHttp ships optional platform hooks that are absent on Android.
 -dontwarn okhttp3.internal.platform.**

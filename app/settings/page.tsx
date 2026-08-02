@@ -45,7 +45,7 @@ export default async function SettingsPage() {
           <CardContent className="flex flex-col gap-3 text-xs leading-relaxed text-muted-foreground">
             <Limitation
               title="Simultaneous Wi-Fi and cellular tests"
-              body="An operating system routes traffic over one active interface, and no browser API can bind a request to a specific radio. NetScope pairs sequential runs instead."
+              body="An operating system routes traffic over one active interface, and no browser API can bind a request to a specific radio. net2ool pairs sequential runs instead."
             />
             <Limitation
               title="Device-wide data usage"

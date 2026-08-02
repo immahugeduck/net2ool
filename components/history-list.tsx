@@ -73,7 +73,7 @@ export function HistoryList({ tests }: { tests: TestRow[] }) {
     const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }))
     const a = document.createElement("a")
     a.href = url
-    a.download = `netscope-log-${new Date().toISOString().slice(0, 10)}.csv`
+    a.download = `net2ool-log-${new Date().toISOString().slice(0, 10)}.csv`
     a.click()
     URL.revokeObjectURL(url)
     toast.success("CSV exported")
