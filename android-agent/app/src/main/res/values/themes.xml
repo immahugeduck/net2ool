@@ -5,7 +5,7 @@
       valid android:theme and the launch window matches the dark UI instead of
       flashing white.
     -->
-    <style name="Theme.NetScopeAgent" parent="android:Theme.Material.NoActionBar">
+    <style name="Theme.Net2oolAgent" parent="android:Theme.Material.NoActionBar">
         <item name="android:windowBackground">#0B0E11</item>
         <item name="android:statusBarColor">#0B0E11</item>
         <item name="android:navigationBarColor">#0B0E11</item>

@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "NetScope Agent"
+rootProject.name = "net2ool Agent"
 include(":app")

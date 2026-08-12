@@ -1,4 +1,4 @@
-package app.netscope.agent.ui
+package app.net2ool.agent.ui
 
 import android.Manifest
 import android.content.Intent
@@ -44,7 +44,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            NetScopeAgentTheme {
+            Net2oolAgentTheme {
                 Surface(modifier = Modifier.fillMaxSize()) {
                     AgentScreen()
                 }
@@ -72,13 +72,13 @@ private fun AgentScreen(viewModel: AgentViewModel = viewModel()) {
             verticalArrangement = Arrangement.spacedBy(16.dp),
         ) {
             Text(
-                text = "NetScope Agent",
+                text = "net2ool Agent",
                 style = MaterialTheme.typography.headlineSmall,
                 fontWeight = FontWeight.SemiBold,
             )
             Text(
                 text = "Collects device-wide data usage, LAN devices, Wi-Fi access points, " +
-                    "and BLE devices, then reports them to your NetScope dashboard.",
+                    "and BLE devices, then reports them to your net2ool dashboard.",
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )

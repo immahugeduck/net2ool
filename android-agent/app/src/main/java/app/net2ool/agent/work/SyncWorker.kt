@@ -1,4 +1,4 @@
-package app.netscope.agent.work
+package app.net2ool.agent.work
 
 import android.content.Context
 import androidx.work.Constraints
@@ -9,14 +9,14 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.WorkerParameters
-import app.netscope.agent.data.AgentStore
-import app.netscope.agent.data.ApiResult
-import app.netscope.agent.data.IngestApi
-import app.netscope.agent.data.IngestRequest
-import app.netscope.agent.scan.BleScanner
-import app.netscope.agent.scan.LanScanner
-import app.netscope.agent.scan.UsageCollector
-import app.netscope.agent.scan.WifiScanner
+import app.net2ool.agent.data.AgentStore
+import app.net2ool.agent.data.ApiResult
+import app.net2ool.agent.data.IngestApi
+import app.net2ool.agent.data.IngestRequest
+import app.net2ool.agent.scan.BleScanner
+import app.net2ool.agent.scan.LanScanner
+import app.net2ool.agent.scan.UsageCollector
+import app.net2ool.agent.scan.WifiScanner
 import java.util.concurrent.TimeUnit
 
 /**
@@ -87,8 +87,8 @@ class SyncWorker(
 
     companion object {
         private const val DAY_MS = 86_400_000L
-        const val PERIODIC_NAME = "netscope-periodic-sync"
-        const val ONE_SHOT_NAME = "netscope-manual-sync"
+        const val PERIODIC_NAME = "net2ool-periodic-sync"
+        const val ONE_SHOT_NAME = "net2ool-manual-sync"
 
         /**
          * Schedules recurring sync. WorkManager enforces a 15 minute floor on

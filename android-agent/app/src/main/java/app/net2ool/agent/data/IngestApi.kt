@@ -1,4 +1,4 @@
-package app.netscope.agent.data
+package app.net2ool.agent.data
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -141,7 +141,7 @@ class IngestApi(private val store: AgentStore) {
     }
 
     private fun describe(code: Int) = when (code) {
-        401 -> "Agent key rejected. It may have been revoked — create a new key in NetScope settings."
+        401 -> "Agent key rejected. It may have been revoked — create a new key in net2ool settings."
         404 -> "Endpoint not found. Check the server URL."
         429 -> "Rate limited by the server. The next scheduled sync will retry."
         in 500..599 -> "Server error ($code). The next scheduled sync will retry."

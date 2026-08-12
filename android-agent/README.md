@@ -1,7 +1,7 @@
-# NetScope Android Agent
+# net2ool Android Agent
 
 The companion app that collects the data a browser physically cannot reach, and
-pushes it to your NetScope dashboard.
+pushes it to your net2ool dashboard.
 
 | Capability | Why it needs a native app |
 | --- | --- |
@@ -18,7 +18,7 @@ pushes it to your NetScope dashboard.
 - **JDK 17** (bundled with Android Studio)
 - An Android device running **Android 8.0 (API 26) or newer**, on the Wi-Fi
   network you want to inspect
-- Your NetScope dashboard deployed to a **public HTTPS URL** (Vercel). The agent
+- Your net2ool dashboard deployed to a **public HTTPS URL** (Vercel). The agent
   refuses plaintext HTTP, so `localhost` will not work.
 
 ## 2. Generate the Gradle wrapper
@@ -55,11 +55,11 @@ For a signed build, create a keystore and add a `signingConfigs` block to
 
 ## 4. Pair the agent with your dashboard
 
-1. Open your NetScope dashboard → **Settings ▸ Agent keys**
+1. Open your net2ool dashboard → **Settings ▸ Agent keys**
 2. Press **Create key** and copy the key (`nsk_...`). It is shown **once** —
    the server stores only an HMAC-SHA256 hash of it.
-3. Open the NetScope Agent app on your phone
-4. Paste your dashboard's base URL (for example `https://netscope.vercel.app`)
+3. Open the net2ool Agent app on your phone
+4. Paste your dashboard's base URL (for example `https://net2ool.vercel.app`)
    and the agent key
 5. Press **Save and test connection**
 
@@ -125,7 +125,7 @@ android-agent/
     └── src/main/
         ├── AndroidManifest.xml
         ├── res/
-        └── java/app/netscope/agent/
+        └── java/app/net2ool/agent/
             ├── data/
             │   ├── AgentStore.kt      # encrypted key + URL storage
             │   └── IngestApi.kt       # wire models + HTTP client

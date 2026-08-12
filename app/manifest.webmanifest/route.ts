@@ -1,11 +1,11 @@
 export const dynamic = "force-static"
 
-/** PWA manifest so NetScope can be installed to an Android home screen. */
+/** PWA manifest so net2ool can be installed to an Android home screen. */
 export function GET() {
   return Response.json(
     {
-      name: "NetScope — Network Diagnostics",
-      short_name: "NetScope",
+      name: "net2ool — Network Diagnostics",
+      short_name: "net2ool",
       description:
         "Speed testing, data usage tracking, device inventory, and threat detection for your network.",
       start_url: "/",

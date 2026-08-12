@@ -1,4 +1,4 @@
-package app.netscope.agent.ui
+package app.net2ool.agent.ui
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -33,7 +33,7 @@ private val LightScheme = lightColorScheme(
 )
 
 @Composable
-fun NetScopeAgentTheme(
+fun Net2oolAgentTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit,
 ) {

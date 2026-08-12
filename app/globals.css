@@ -51,7 +51,7 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-/* NetScope is a dark-first instrument. Light mode mirrors the same 5-color
+/* net2ool is a dark-first instrument. Light mode mirrors the same 5-color
    system: near-black/neutral scale, signal cyan, instrument amber, alert red. */
 :root {
   color-scheme: light;

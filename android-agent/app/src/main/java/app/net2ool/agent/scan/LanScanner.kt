@@ -1,9 +1,9 @@
-package app.netscope.agent.scan
+package app.net2ool.agent.scan
 
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.LinkAddress
-import app.netscope.agent.data.LanHostDto
+import app.net2ool.agent.data.LanHostDto
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll

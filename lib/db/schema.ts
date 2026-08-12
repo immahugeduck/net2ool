@@ -66,7 +66,7 @@ export const verification = pgTable("verification", {
 })
 
 /* ---------------------------------------------------------------------------
- * NetScope app tables. Plain `userId` column for scoping, no FK constraints.
+ * net2ool app tables. Plain `userId` column for scoping, no FK constraints.
  * ------------------------------------------------------------------------- */
 
 export const speedTest = pgTable("speed_test", {

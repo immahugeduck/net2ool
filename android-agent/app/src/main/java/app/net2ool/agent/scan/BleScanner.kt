@@ -1,4 +1,4 @@
-package app.netscope.agent.scan
+package app.net2ool.agent.scan
 
 import android.Manifest
 import android.bluetooth.BluetoothManager
@@ -9,7 +9,7 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.os.Build
 import androidx.core.content.ContextCompat
-import app.netscope.agent.data.BleDeviceDto
+import app.net2ool.agent.data.BleDeviceDto
 import kotlinx.coroutines.delay
 
 /**

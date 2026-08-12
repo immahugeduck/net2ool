@@ -1,5 +1,5 @@
 /**
- * NetScope measurement engine.
+ * net2ool measurement engine.
  *
  * Design notes that matter for accuracy:
  *  - Multiple parallel streams are required to saturate a modern link. A single

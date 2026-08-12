@@ -1,4 +1,4 @@
-package app.netscope.agent.scan
+package app.net2ool.agent.scan
 
 import android.app.AppOpsManager
 import android.app.usage.NetworkStats
@@ -6,7 +6,7 @@ import android.app.usage.NetworkStatsManager
 import android.content.Context
 import android.net.ConnectivityManager
 import android.os.Process
-import app.netscope.agent.data.UsageBucketDto
+import app.net2ool.agent.data.UsageBucketDto
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale

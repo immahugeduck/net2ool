@@ -15,15 +15,15 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'NetScope — Network Diagnostics & Threat Detection',
+  title: 'net2ool — Network Diagnostics & Threat Detection',
   description:
     'Measure real download and upload throughput, track daily data usage, inventory every device on your network, and surface nearby cameras, rogue access points, and traffic anomalies.',
-  applicationName: 'NetScope',
+  applicationName: 'net2ool',
   generator: 'v0.app',
   manifest: '/manifest.webmanifest',
   appleWebApp: {
     capable: true,
-    title: 'NetScope',
+    title: 'net2ool',
     statusBarStyle: 'black-translucent',
   },
   formatDetection: { telephone: false },

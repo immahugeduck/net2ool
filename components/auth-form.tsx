@@ -51,7 +51,7 @@ export function AuthForm({ mode }: { mode: "sign-in" | "sign-up" }) {
             <Activity className="size-6 text-primary" aria-hidden="true" />
           </div>
           <div>
-            <h1 className="font-mono text-xl font-semibold tracking-tight">NetScope</h1>
+            <h1 className="font-mono text-xl font-semibold tracking-tight">net2ool</h1>
             <p className="mt-1 text-sm leading-relaxed text-muted-foreground text-pretty">
               {isSignUp ? "Create an account to start logging network diagnostics." : "Sign in to your network console."}
             </p>

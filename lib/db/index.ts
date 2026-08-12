@@ -2,7 +2,7 @@ import { drizzle } from "drizzle-orm/node-postgres"
 import { Pool } from "pg"
 import * as schema from "./schema"
 
-const globalForDb = globalThis as unknown as { __netscopePool?: Pool }
+const globalForDb = globalThis as unknown as { __net2oolPool?: Pool }
 
 /**
  * Neon's connection string carries `sslmode=require`, which `pg` currently
@@ -23,14 +23,14 @@ function connectionString() {
 }
 
 export const pool =
-  globalForDb.__netscopePool ??
+  globalForDb.__net2oolPool ??
   new Pool({
     connectionString: connectionString(),
     max: 5,
   })
 
 if (process.env.NODE_ENV !== "production") {
-  globalForDb.__netscopePool = pool
+  globalForDb.__net2oolPool = pool
 }
 
 export const db = drizzle(pool, { schema })

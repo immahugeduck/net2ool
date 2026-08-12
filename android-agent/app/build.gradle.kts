@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "app.netscope.agent"
+    namespace = "app.net2ool.agent"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "app.netscope.agent"
+        applicationId = "app.net2ool.agent"
         minSdk = 26
         targetSdk = 35
         versionCode = 1
