@@ -172,9 +172,42 @@ export const userSetting = pgTable("user_setting", {
   updatedAt: timestamp("updatedAt").defaultNow().notNull(),
 })
 
+/**
+ * Coordinates a genuinely simultaneous WiFi-vs-cellular run across two devices
+ * signed into the same account. One device hosts and shares a short code; the
+ * second joins with it. The server hands both devices a common `startAt` so
+ * they begin measuring at the same instant, and a shared `comparisonGroup`
+ * links the two resulting speed_test rows.
+ */
+export const pairingSession = pgTable("pairing_session", {
+  id: serial("id").primaryKey(),
+  userId: text("userId").notNull(),
+  /** Short human-typed join code (unambiguous charset). */
+  code: text("code").notNull(),
+  /** waiting | ready | counting | running | complete | expired */
+  status: text("status").default("waiting").notNull(),
+  /** Connection the host device is on: wifi | cellular */
+  hostRole: text("hostRole").default("wifi").notNull(),
+  /** Connection the guest device is on: wifi | cellular */
+  guestRole: text("guestRole"),
+  guestJoined: boolean("guestJoined").default(false).notNull(),
+  /** Synchronized start instant handed to both devices. */
+  startAt: timestamp("startAt"),
+  hostResultId: integer("hostResultId"),
+  guestResultId: integer("guestResultId"),
+  hostDone: boolean("hostDone").default(false).notNull(),
+  guestDone: boolean("guestDone").default(false).notNull(),
+  /** Links the two speed_test rows into one A/B comparison. */
+  comparisonGroup: text("comparisonGroup").notNull(),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow().notNull(),
+  expiresAt: timestamp("expiresAt").notNull(),
+})
+
 export type SpeedTest = typeof speedTest.$inferSelect
 export type UsageSample = typeof usageSample.$inferSelect
 export type NetworkDevice = typeof networkDevice.$inferSelect
 export type ThreatFinding = typeof threatFinding.$inferSelect
 export type AgentKey = typeof agentKey.$inferSelect
 export type UserSetting = typeof userSetting.$inferSelect
+export type PairingSession = typeof pairingSession.$inferSelect

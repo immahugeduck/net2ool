@@ -25,6 +25,11 @@ export interface SaveSpeedTestInput {
   asn: string | null
   effectiveType: string | null
   label?: string | null
+  /**
+   * When set (paired sessions), this group is used verbatim instead of the
+   * automatic 30-minute pairing heuristic, so both devices' rows join cleanly.
+   */
+  comparisonGroup?: string | null
 }
 
 const VALID_TYPES = new Set(["wifi", "cellular", "ethernet", "unknown"])
@@ -46,8 +51,9 @@ export async function saveSpeedTest(input: SaveSpeedTestInput) {
 
   // Group a WiFi run with the most recent Cellular run (or vice versa) taken
   // within the last 30 minutes, so the A/B comparison card can pair them.
-  let comparisonGroup: string | null = null
-  if (connectionType === "wifi" || connectionType === "cellular") {
+  // An explicit group (paired sessions) always wins over the heuristic.
+  let comparisonGroup: string | null = input.comparisonGroup ?? null
+  if (!comparisonGroup && (connectionType === "wifi" || connectionType === "cellular")) {
     const counterpart = connectionType === "wifi" ? "cellular" : "wifi"
     const [recent] = await db
       .select({ group: speedTest.comparisonGroup, id: speedTest.id })
